@@ -22,7 +22,7 @@ namespace Client
         string USER = Properties.Settings.Default.Username;
         public Chat()
         {
-            simpleButton1.Enabled = false;
+            
             string connectionString;
             connectionString = "Server=64.94.238.79; database=ghost; Uid=Ryan; Pwd=COREi7;";
             connection = new MySqlConnection(connectionString);
@@ -119,6 +119,11 @@ namespace Client
             {
                 XtraMessageBox.Show(ex.Message);
             }
+        }
+
+        private void Chat_Load(object sender, EventArgs e)
+        {
+            simpleButton1.Enabled = false;
         }
     }
 }
